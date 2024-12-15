@@ -1,11 +1,7 @@
 @import url(common.css);
-
-body {
-    display: flex;
-    justify-content: center;
-}
+@import url(util.css);
 
 #wrap {
-    width: 1250px;
+    width: 100%;
     text-align: center;
 }

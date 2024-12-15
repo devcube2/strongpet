@@ -1,0 +1,19 @@
+.strongpet-header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid orange;
+}
+
+#strongpet-header-top>#header-top {
+    width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#strongpet-header-nav>#header-nav {
+    width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
