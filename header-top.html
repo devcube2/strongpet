@@ -8,8 +8,54 @@
     </div>
 
     <div id="top-menu">
-        <span>로그인</span>
-        <span>회원가입</span>
-        <span>장바구니</span>
-    </div>
+        <div id="header-top" class="d-flex justify-content-between align-items-center p-3 bg-light">
+            <div id="top-search-box">
+                <input type="text" placeholder="Search" class="form-control">
+            </div>
+        
+            <div id="top-logo">
+                <img src="img/main/header-logo.png" alt="Logo" style="height: 50px;">
+            </div>
+        
+            <div id="top-menu">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#customLoginModal">
+                    로그인
+                </button>
+                <button class="btn btn-secondary">장바구니</button>
+            </div>
+        </div>
+        
+        <!-- Custom Login Modal -->
+        <div class="modal fade login-modal" id="customLoginModal" tabindex="-1" aria-labelledby="customLoginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="modal-title" id="customLoginModalLabel">로그인</h5>
+                        <form>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="loginEmail" placeholder="이메일">
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" id="loginPassword" placeholder="비밀번호">
+                            </div>
+                            <div class="form-check mb-3">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">로그인 상태 유지</label>
+                            </div>
+                            <button type="submit" class="btn btn-dark w-100 mb-3">로그인</button>
+                            <div class="text-center mt-3">
+                                <a href="#">회원가입</a> | <a href="#">아이디 · 비밀번호 찾기</a>
+                            </div>
+                        </form>
+                        <div class="text-center mb-3">또는</div>
+                        <button class="btn btn-custom-naver w-100 mb-2">네이버로 시작하기</button>
+                        <button class="btn btn-custom-kakao w-100 mb-2">카카오로 시작하기</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
 </div>

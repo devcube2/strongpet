@@ -17,3 +17,27 @@
     justify-content: space-between;
     align-items: center;
 }
+.login-modal .btn-custom-naver {
+    background-color: #03C75A;
+    color: white;
+    font-weight: bold;
+}
+.login-modal .btn-custom-kakao {
+    background-color: #FEE500;
+    color: #3C1E1E;
+    font-weight: bold;
+}
+.login-modal .modal-body {
+    padding: 2rem;
+}
+#header-top {
+    background-color: #f8f9fa;
+    padding: 1rem;
+}
+#top-logo img {
+    height: 50px;
+}
+.modal-title{
+    align-items: center;
+    font-size: 50px;
+}
