@@ -1,0 +1,80 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none; color: black;
+}
+li{
+    list-style: none;
+}
+.font{
+    font-weight: 900;
+}
+/* 전체 */
+
+#b_wrap{
+    width: 1250px; padding: 100px 15px;
+    margin: 0 auto; 
+}
+#b_top{
+    display: flex; justify-content: space-between;
+    margin-bottom: 50px;
+}
+#b_top h1{
+    font-size: 36px; 
+}
+#b_top > .topbox > span:first-child{
+    margin-right: 20px; font-size: 12px;
+}
+#b_top > .topbox > span:last-child {
+    margin-left: 20px; font-size: 12px;
+}
+#b_top > .topbox > span:nth-of-type(2){
+    background-image: url(../img/board/right_arrow.png);
+}
+/* b_top */
+
+#b_middle{
+    margin-bottom: 30px;
+}
+#b_middle > div > ul{
+    display: flex; justify-content: space-between;
+    background-color: #f2f6f6;
+}
+#b_middle > div > ul li{
+    background-color: #f2f6f6;
+}
+#b_middle > div > ul li a{
+    padding: 15px 74px; display: block;
+    font-size: 14px;
+}
+/* b_middle */
+    /* border-bottom: 1px solid #dfdfdf; */
+#b_bottom > .b_table table{
+    width: 1250px; font-size: 14px;
+}
+#b_bottom > .b_table table thead tr th{
+    font-weight: 400;
+}
+#b_bottom .category{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+#b_bottom .category a{
+    display: block;
+}
+#b_bottom .category ul{
+    position: absolute; left: 0; top: 100%;
+    width: 100%; border: 1px solid rgba(215, 215, 215, 1);
+    border-radius: 5px; z-index: 1;
+    /* display: none; */
+}
+#b_bottom .category ul li a{
+    display: block;
+    padding: 5px 10px 5px 5px;
+}
+#b_bottom > .b_table td{
+    /* padding: 30px; */
+}
