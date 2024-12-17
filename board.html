@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>board</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/board.css'>
     <script src='./js/board.js'></script>
@@ -12,9 +12,11 @@
     <div id="b_wrap">
         <div id="b_top">
             <h1> 1:1문의 </h1>
-            <span><a href="#">커뮤니티</a></span>
-            <span>></span>
-            <span><a href="#">1:1문의</a></span>
+            <div class="topbox">
+                <span><a href="#">커뮤니티</a></span>
+                <span></span>
+                <span><a href="#">1:1문의</a></span>
+            </div>
         </div> <!-- b_top end-->
         <div id="b_middle">
             <div>
@@ -29,19 +31,19 @@
             </div>
         </div> <!-- b_middle end-->
         <div id="b_bottom">
-            <div id="b_table">
+            <div class="b_table">
                 <table>
                     <thead>
                         <tr>
                             <th> No </th>
-                            <th> 
+                            <th class="category"> 
                                 <a href="#"> 카테고리 </a>
                                 <ul>
-                                    <li> 전체보기 </li>
-                                    <li> 상품 </li>
-                                    <li> 배송 </li>
-                                    <li> 회원 </li>
-                                    <li> 기타 </li>
+                                    <li class="font"> <a href="#">전체보기</a></li>
+                                    <li> <a href="#">상품</a></li>
+                                    <li> <a href="#">배송</a></li>
+                                    <li> <a href="#">회원</a></li>
+                                    <li> <a href="#">기타</a></li>
                                 </ul>
                             </th>
                             <th> 제목 </th>
