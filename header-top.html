@@ -2,14 +2,96 @@
     <div id="top-search-box">
         <input type="text" placeholder="Search">
     </div>
-
     <div id="top-logo">
         <img src="img/main/header-logo.png" alt="">
     </div>
-
     <div id="top-menu">
-        <span>로그인</span>
-        <span>회원가입</span>
-        <span>장바구니</span>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+            로그인
+        </button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+            회원가입
+        </button>
+        <button>장바구니</button>
+    </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">로그인</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group mb-3">
+                        <input type="email" class="form-control" placeholder="이메일">
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="password" class="form-control" placeholder="비밀번호">
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="rememberMe" >
+                        <label class="form-check-label" style="margin-left: -280px;" >로그인 상태유지</label>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100">로그인</button>
+                </form>
+                
+                    <a href="#" class="loginJoin" >회원가입</a>  <a href="#" class="loginFind" ; >아이디 · 비밀번호 찾기</a>
+                
+                <hr>
+                <button class="btn btn-success w-100 mb-2">네이버로 시작하기</button>
+                <button class="btn btn-warning w-100">카카오로 시작하기</button>
+                <hr>
+                <button class="unjoin">비회원 주문정보 조회</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">회원가입</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 회원가입 폼 -->
+                <form>
+                    <button class="btn_join" data-bs-toggle="modal" data-bs-target="#joinModal">ID/PW 회원가입</button>
+                    <hr>
+                    <button class="btn btn-success w-100 mb-2">네이버로 시작하기</button>
+                    <button class="btn btn-warning w-100">카카오로 시작하기</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="joinModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">약관동의</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 회원가입 폼 -->
+                <form>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="rememberMe" >
+                        <label class="form-check-label" style="margin-left: 0px;" >이용약관, 개인정보 수집 및 이용에 모두 동의합니다.</label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="rememberMe" >
+                        <label class="form-check-label" style="margin-left: -240px;" >이용약관동의(필수)</label>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
