@@ -30,7 +30,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f8f9fa;
+    background-color: white;
     border-bottom: 1px solid #ddd;
 }
 
@@ -46,18 +46,16 @@ body {
 
 #top-menu button {
     margin-left: 10px;
-    background-color: #555;
+    background-color :  white;
     border: none;
-    color: white;
+    color: black;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
 }
 
-#top-menu button:hover {
-    background-color: #333;
-}
+
 
 /* 모달 스타일 */
 .modal-content {
@@ -76,11 +74,13 @@ body {
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+}
+.form-check-input {
+    accent-color: black;
 }
 
 .form-check-label {
-    margin-left: 5px;
+    margin-left: 0px;
 }
 
 .btn-dark {
@@ -94,12 +94,12 @@ body {
 }
 
 .btn-success {
-    background-color: #03c75a;
+    background-color: green;
     color: white;
 }
 
 .btn-warning {
-    background-color: #fee500;
+    background-color: yellow;
     color: black;
     font-weight: bold;
 }
@@ -116,3 +116,33 @@ body {
 .form-check-label {
     margin-left: 5px;
 }
+
+.unjoin {
+    border: 1px solid;
+    height: 50px;
+    width: 420px;
+    background-color: gray;
+    color: white;
+
+}
+
+.loginJoin{
+    color: black;
+    margin-left: -15px;
+    text-decoration-line: none;
+}
+
+.loginFind{
+    color: black;
+    margin-left: 180px;
+    text-decoration-line: none;
+}
+
+.btn_join{
+    border: 1px solid lightgray;
+    height: 50px;
+    width: 420px;
+    background-color: white;
+    color: black;
+}
+
