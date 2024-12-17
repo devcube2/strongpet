@@ -12,6 +12,26 @@
             $("#strongpet-header-top").load("header-top.html");
             $("#strongpet-header-nav").load("header-nav.html");
         });
+
+        // 메인사진 5초 간격으로 자동 바꾸기
+        const interval = 5000 // 5초
+        setTimeout(logoChange, interval)
+        function logoChange() {
+            rotateNum = $("#main-logo").attr("src").substr(-5, 1)
+            rotateNum++
+            if (rotateNum > 7) {
+                rotateNum = 1
+            }
+            // console.log(`rotateNum: ${rotateNum}`)
+
+            if (rotateNum == 3) {
+                $("#main-logo").attr("src", `img/main/main-rotate${rotateNum}.gif`)
+            }
+            else {
+                $("#main-logo").attr("src", `img/main/main-rotate${rotateNum}.jpg`)
+            }
+            setTimeout(logoChange, interval)
+        }
     </script>
 </head>
 
@@ -22,13 +42,13 @@
             <div id="strongpet-header-top"></div>
         </header>
 
-        <nav class="strongpet-header">
+        <nav class="strongpet-header top-bottom-pad15">
             <div id="strongpet-header-nav"></div>
         </nav>
 
         <!-- 메인 -->
-        <main id="main">
-
+        <main id="main" class="top-bottom-pad30">
+            <img id="main-logo" src="img/main/main-rotate1.jpg" alt="">
         </main>
 
         <!-- 푸터 -->
