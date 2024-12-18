@@ -28,13 +28,11 @@
                 <form>
                     <div class="form-group mb-3">
                         <input type="email" class="form-control" placeholder="이메일">
-                    </div>
-                    <div class="form-group mb-3">
                         <input type="password" class="form-control" placeholder="비밀번호">
                     </div>
                     <div class="form-check mb-3">
                         <input type="checkbox" class="form-check-input" id="rememberMeLogin">
-                        <label class="form-check-label" style="margin-left: -280px;">로그인 상태유지</label>
+                        <label class="form-check-label" style="margin-left: 0px;">로그인 상태유지</label>
                     </div>
                     <button type="submit" class="btn btn-dark w-100">로그인</button>
                 </form>
@@ -77,17 +75,21 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- 이용약관 폼 -->
-                <form>
+                <form id="joinForm">
                     <div class="form-check mb-3">
-                        <input type="checkbox" class="form-check-input" id="agreeTerms">
-                        <label class="form-check-label" style="margin-left: 0px;">이용약관, 개인정보 수집 및 이용에 모두 동의합니다.</label>
+                        <input type="checkbox" class="form-check-input" id="agreeAll" onchange="allcheck()">
+                        <label class="form-check-label" for="agreeAll">
+                            이용약관, 개인정보 수집 및 이용에 모두 동의합니다.
+                        </label>
                     </div>
                     <div class="form-check mb-3">
-                        <input type="checkbox" class="form-check-input" id="agreeRequiredTerms">
-                        <label class="form-check-label" style="margin-left: -11px;">이용약관동의(필수)</label>
+                        <input type="checkbox" class="form-check-input" id="agreeTerms" class="child-agree">
+                        <label class="form-check-label" for="agreeTerms">
+                            이용약관 동의 (필수)
+                        </label>
                     </div>
-                    <textarea id="termsContent" rows="5" readonly>제1조 목적
+                    <textarea id="termsContent" rows="5" readonly>
+                        제1조 목적
 
                         본 이용약관은 “건강한펫”(이하 "건강한펫")의 서비스의 이용조건과 운영에 관한 제반사항 규정을 목적으로 합니다.
                         
@@ -210,11 +212,14 @@
                         부칙
                         
                         이 약관은 2020.7.1 부터 시행합니다.</textarea>
-                    <div class="form-check mb-3">
-                        <input type="checkbox" class="form-check-input" id="agreePrivacy">
-                        <label class="form-check-label" style="margin-left: -11px;">개인정보 수집 및 이용 동의(필수)</label>
-                    </div>
-                    <textarea id="privacyContent" rows="5" readonly>1. 개인정보 수집목적 및 이용목적
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="agreePrivacy" class="child-agree">
+                            <label class="form-check-label" for="agreePrivacy">
+                                개인정보 수집 및 이용 동의 (필수)
+                            </label>
+                        </div>
+                    <textarea id="privacyContent" rows="5" readonly>
+                        1. 개인정보 수집목적 및 이용목적
 
                         (1) 홈페이지 회원 가입 및 관리
                         회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별․인증, 회원자격 유지․관리, 제한적 본인확인제 시행에 따른 본인확인, 서비스 부정이용 방지, 만 14세 미만 아동의 개인정보 처리시 법정대리인의 동의여부 확인, 각종 고지․통지, 고충처리 등의 목적
@@ -230,10 +235,12 @@
                         
                         3. 개인정보 보유 및 이용기간
                         회원탈퇴 시까지 (단, 관계 법령에 보존 근거가 있는 경우 해당 기간 시까지 보유, 개인정보처리방침에서 확인 가능)</textarea>
-                    <div class="form-check mb-3">
-                        <input type="checkbox" class="form-check-input" id="ageCheck">
-                        <label class="form-check-label" style="margin-left: 0px;">만 14세 이상입니다. (필수)</label>
-                    </div>
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input child-agree" id="agreeAge">
+                            <label class="form-check-label" for="agreeAge">
+                                만 14세 이상입니다. (필수)
+                            </label>
+                        </div>
                     <button type="button" data-bs-dismiss="modal" aria-label="Close">취소</button>
                     <button type="button" class="add_join" data-bs-toggle="modal" data-bs-target="#addjoinModal">가입하기</button>
                 </form>
@@ -253,7 +260,19 @@
                 <!-- 이용약관 폼 -->
                 <form>
                     <div class="form-check mb-3">
-                        
+                        <div class="form-group mb-3">
+                            <input type="email" class="form-control" placeholder="이메일">
+                            <input type="password" class="form-control" placeholder="비밀번호">
+                            <input type="password" class="form-control" placeholder="비밀번호 확인">
+                            <a>이름</a>
+                            <input type="name" class="form-control" placeholder="이름을 입력하세요">
+                            <a>연락처</a>
+                            <input type="phoneNum" class="form-control" placeholder="연락처">
+                            <a>주소</a>
+                            <input type="adress" class="form-control" placeholder="주소">
+                            <input type="adress" class="form-control" placeholder="상세주소">
+                            <button>가입하기</button>
+                        </div>
                     </div>
                 </form>
             </div>
