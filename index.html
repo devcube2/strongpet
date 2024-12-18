@@ -31,7 +31,7 @@
                 $("#main-logo").attr("src", `img/main/main-rotate${rotateNum}.jpg`)
             }
             setTimeout(logoChange, interval)
-        }
+        }        
     </script>
 </head>
 
@@ -52,44 +52,12 @@
             <div class="bottom-mg30">
                 <img id="main-logo" src="img/main/main-rotate1.jpg" alt="" />
             </div>
-            
-            <br><br><br><br>            
+
+            <br><br><br><br>
 
             <!-- 주간 베스트 상품 -->
-            <div class="center-t0 center-m0">
-                <p class="f-size24 f-bold top-bottom-pad15">WEEKLY BEST PRODUCT</p>
-                <ul class="show-line">
-                    <li class="show-box">
-                        <img src="img/main/과일-야채-치즈-노른자/동결건조꼬마양배추35g/view-1.jpg" alt="">
-                        <span class="f-bold f-size12">건강한펫 동결건조 꼬마양배추 35g</span>
-                        <br />
-                        <span class="f-bold f-size12">12,000원</span>
-                    </li>
-                    <li class="show-box">
-                        <img src="img/main/꼬마트릿/동결건조리코타치즈미니3종/view-1.jpg" alt="">
-                        <span class="f-bold f-size12">건강한펫 동결건조 리코타치즈 미니 3종</span>
-                        <br />
-                        <span class="f-bold f-size12">7,000원</span>
-                    </li>
-                    <li class="show-box">
-                        <img src="img/main/동물성단백질/동결건조피그대패등심20g/view-1.jpg" alt="">
-                        <span class="f-bold f-size12">건강한펫 동결건조 피그 대패등심 20g</span>
-                        <br />
-                        <span class="f-bold f-size12">4,000원</span>
-                    </li>
-                    <li class="show-box">
-                        <img src="img/main/과일-야채-치즈-노른자/동결건조노른자100g/view-1.jpg" alt="">
-                        <span class="f-bold f-size12">건강한펫 동결건조 노른자 100g</span>
-                        <br />
-                        <span class="f-bold f-size12">12,000원</span>
-                    </li>
-                    <li class="show-box">
-                        <img src="img/main/과일-야채-치즈-노른자/동결건조야채랑과일이랑60g/view-1.jpg" alt="">
-                        <span class="f-bold f-size12">건강한펫 야채랑 과일이랑 60g</span>
-                        <br />
-                        <span class="f-bold f-size12">17,000원</span>
-                    </li>
-                </ul>
+            <div id="weekly-best-goods" class="center-t0 center-m0">
+                
             </div>
 
             <br><br><br><br>
@@ -138,6 +106,7 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>loadHTML()</script> <!-- 상품 로딩 -->
 </body>
 
 
