@@ -16,3 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+document.getElementById('signupButton').addEventListener('click', function(e) {
+    
+    window.location.href = "joinModal/terms"; 
+});

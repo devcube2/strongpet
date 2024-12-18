@@ -10,7 +10,8 @@
             로그인
         </button>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
-            회원가입</button>
+            회원가입
+        </button>
         <button>장바구니</button>
     </div>
 </div>
@@ -32,14 +33,11 @@
                         <input type="password" class="form-control" placeholder="비밀번호">
                     </div>
                     <div class="form-check mb-3">
-                        <input type="checkbox" class="form-check-input" id="rememberMe" >
-                        <label class="form-check-label" style="margin-left: -280px;" >로그인 상태유지</label>
+                        <input type="checkbox" class="form-check-input" id="rememberMeLogin">
+                        <label class="form-check-label" style="margin-left: -280px;">로그인 상태유지</label>
                     </div>
                     <button type="submit" class="btn btn-dark w-100">로그인</button>
                 </form>
-                
-                    <a href="#" class="loginJoin" >회원가입</a>  <a href="#" class="loginFind" ; >아이디 · 비밀번호 찾기</a>
-                
                 <hr>
                 <button class="btn btn-success w-100 mb-2">네이버로 시작하기</button>
                 <button class="btn btn-warning w-100">카카오로 시작하기</button>
@@ -59,9 +57,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- 회원가입 폼 -->
                 <form>
-                    <button class="btn_join" data-bs-toggle="modal" data-bs-target="#joinModal">ID/PW 회원가입</button>
+                    <button type="button" class="btn_join" data-bs-toggle="modal" data-bs-target="#joinModal">ID/PW 회원가입</button>
                     <hr>
                     <button class="btn btn-success w-100 mb-2">네이버로 시작하기</button>
                     <button class="btn btn-warning w-100">카카오로 시작하기</button>
@@ -71,25 +68,26 @@
     </div>
 </div>
 
-<div class="modal fade" id="joinModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+<!-- Join Modal (약관 동의) -->
+<div class="modal fade" id="joinModal" tabindex="-1" aria-labelledby="joinModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="registerModalLabel">약관동의</h5>
+                <h5 class="modal-title" id="joinModalLabel">약관동의</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <!-- 이용약관 폼 -->
                 <form>
                     <div class="form-check mb-3">
-                        <input type="checkbox" class="form-check-input" id="rememberMe" >
-                        <label class="form-check-label" style="margin-left: 0px;" >이용약관, 개인정보 수집 및 이용에 모두 동의합니다.</label>
+                        <input type="checkbox" class="form-check-input" id="agreeTerms">
+                        <label class="form-check-label" style="margin-left: 0px;">이용약관, 개인정보 수집 및 이용에 모두 동의합니다.</label>
                     </div>
                     <div class="form-check mb-3">
-                        <input type="checkbox" class="form-check-input" id="rememberMe" >
-                        <label class="form-check-label" style="margin-left: -11px;" >이용약관동의(필수)</label>
-                    </ul>
-                    <textarea name=""id="">제1조 목적
+                        <input type="checkbox" class="form-check-input" id="agreeRequiredTerms">
+                        <label class="form-check-label" style="margin-left: -11px;">이용약관동의(필수)</label>
+                    </div>
+                    <textarea id="termsContent" rows="5" readonly>제1조 목적
 
                         본 이용약관은 “건강한펫”(이하 "건강한펫")의 서비스의 이용조건과 운영에 관한 제반사항 규정을 목적으로 합니다.
                         
@@ -211,13 +209,12 @@
                         
                         부칙
                         
-                        이 약관은 2020.7.1 부터 시행합니다.</textarea></li>
-                    </div>
+                        이 약관은 2020.7.1 부터 시행합니다.</textarea>
                     <div class="form-check mb-3">
-                        <input type="checkbox" class="form-check-input" id="rememberMe" >
-                        <label class="form-check-label" style="margin-left: -11px;" >개인정보 수집 및 이용 동의(필수)</label>
-                    </ul>
-                    <textarea name=""id="">1. 개인정보 수집목적 및 이용목적
+                        <input type="checkbox" class="form-check-input" id="agreePrivacy">
+                        <label class="form-check-label" style="margin-left: -11px;">개인정보 수집 및 이용 동의(필수)</label>
+                    </div>
+                    <textarea id="privacyContent" rows="5" readonly>1. 개인정보 수집목적 및 이용목적
 
                         (1) 홈페이지 회원 가입 및 관리
                         회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별․인증, 회원자격 유지․관리, 제한적 본인확인제 시행에 따른 본인확인, 서비스 부정이용 방지, 만 14세 미만 아동의 개인정보 처리시 법정대리인의 동의여부 확인, 각종 고지․통지, 고충처리 등의 목적
@@ -232,19 +229,33 @@
                         ID, 성명, 비밀번호, 주소, 휴대폰번호, 이메일, 14세 미만 가입자의 경우 법정대리인 정보
                         
                         3. 개인정보 보유 및 이용기간
-                        회원탈퇴 시까지 (단, 관계 법령에 보존 근거가 있는 경우 해당 기간 시까지 보유, 개인정보처리방침에서 확인 가능)</textarea></li>
-                    </div>
+                        회원탈퇴 시까지 (단, 관계 법령에 보존 근거가 있는 경우 해당 기간 시까지 보유, 개인정보처리방침에서 확인 가능)</textarea>
                     <div class="form-check mb-3">
-                        <input type="checkbox" class="form-check-input" id="rememberMe" >
-                        <label class="form-check-label" style="margin-left: 0px;" >만 14세 이상입니다. (필수)</label>
+                        <input type="checkbox" class="form-check-input" id="ageCheck">
+                        <label class="form-check-label" style="margin-left: 0px;">만 14세 이상입니다. (필수)</label>
                     </div>
                     <button type="button" data-bs-dismiss="modal" aria-label="Close">취소</button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addjoinModal">회원가입</button>
+                    <button type="button" class="add_join" data-bs-toggle="modal" data-bs-target="#addjoinModal">가입하기</button>
                 </form>
             </div>
-                        </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addjoinModal" tabindex="-1" aria-labelledby="addjoinModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addjoinModalLabel">회원가입</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 이용약관 폼 -->
+                <form>
+                    <div class="form-check mb-3">
+                        
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
