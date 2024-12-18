@@ -15,8 +15,10 @@
     width: 1250px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
+    margin: 0px; /* 누가 얘한테 margin 을 주는건지 모르겠음. 값 안주면 16px 바텀에 먹임.. */
 }
+
 /* 전체 스타일링 */
 body {
     font-family: 'Arial', sans-serif;
