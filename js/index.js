@@ -119,7 +119,8 @@ function generateStock() {
         weekly: false,
         best: true,
         thumbnail: [
-            'img/main/꼬마트릿/동결건조꼬마가자미160g/view-1.jpg'
+            'img/main/꼬마트릿/동결건조꼬마가자미160g/view-1.jpg',
+            'img/main/꼬마트릿/동결건조꼬마가자미160g/view-2.jpg'
         ],
         price: 30000,
         quantity: 10,
@@ -264,10 +265,10 @@ function generateStock() {
 // 한줄에 몇개씩 출력할건지 (이건 수정시 css 랑 연관되어있음...)
 const displayLineCount = 5
 
-function generateLiTag(thumbnail, name, price) {
+function generateLiTag(thumbnail, thumbnailOver, name, price) {
     let liTag = `
         <li class="show-box">
-            <img src="${thumbnail}" alt="">
+            <img src="${thumbnail}" class="show-box-img" onmouseover="this.src='${thumbnailOver}'" onmouseout="this.src='${thumbnail}'">
             <span class="f-size12">${name}</span>
             <br />
             <span class="f-bold f-size12">${price}원</span>
@@ -300,14 +301,14 @@ function loadHTML() {
     for (let i = 0; i < parseInt(주간베스트상품.length / displayLineCount); i++) {
         html += '<ul class="show-line">'
         for (let j = 0; j < displayLineCount; j++, count++) {
-            html += generateLiTag(주간베스트상품[count].thumbnail[0], 주간베스트상품[count].name, 주간베스트상품[count].price)
+            html += generateLiTag(주간베스트상품[count].thumbnail[0], 주간베스트상품[count].thumbnail[1], 주간베스트상품[count].name, 주간베스트상품[count].price)
         }
         html += '</ul>'
     }
     if (count < 주간베스트상품.length) {
         html += '<ul class="show-line">'
         for (; count < 주간베스트상품.length; count++) {
-            html += generateLiTag(주간베스트상품[count].thumbnail[0], 주간베스트상품[count].name, 주간베스트상품[count].price)
+            html += generateLiTag(주간베스트상품[count].thumbnail[0], 주간베스트상품[count].thumbnail[1], 주간베스트상품[count].name, 주간베스트상품[count].price)
         }
         html += '</ul>'
     }
@@ -319,14 +320,14 @@ function loadHTML() {
     for (let i = 0; i < parseInt(베스트상품.length / displayLineCount); i++) {
         html += '<ul class="show-line">'
         for (let j = 0; j < displayLineCount; j++, count++) {
-            html += generateLiTag(베스트상품[count].thumbnail[0], 베스트상품[count].name, 베스트상품[count].price)
+            html += generateLiTag(베스트상품[count].thumbnail[0], 베스트상품[count].thumbnail[1], 베스트상품[count].name, 베스트상품[count].price)
         }
         html += '</ul>'
     }
     if (count < 베스트상품.length) {
         html += '<ul class="show-line">'
         for (; count < 베스트상품.length; count++) {
-            html += generateLiTag(베스트상품[count].thumbnail[0], 베스트상품[count].name, 베스트상품[count].price)
+            html += generateLiTag(베스트상품[count].thumbnail[0], 베스트상품[count].thumbnail[1], 베스트상품[count].name, 베스트상품[count].price)
         }
         html += '</ul>'
     }

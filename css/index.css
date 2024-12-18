@@ -2,15 +2,15 @@
 @import url(util.css);
 
 #wrap {
-    width: 100%;    
+    width: 100%;
 }
 
-#main {    
+#main {
     width: 1250px;
 }
 
 #main-logo {
-    width: 100%;    
+    width: 100%;
 }
 
 .show-line {
@@ -25,7 +25,7 @@
     padding: 0px 15px;
 }
 
-.show-box>img {
+.show-box-img {
     display: block;
-    width: 100%;    
+    width: 100%;
 }
