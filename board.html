@@ -6,7 +6,6 @@
     <title>board</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/board.css'>
-    <script src='./js/board.js'></script>
 </head>
 <body>
     <div id="b_wrap">
@@ -24,7 +23,7 @@
                     <li><a href="#"> 공지사항 </a></li>
                     <li><a href="#"> 이벤트 </a></li>
                     <li><a href="#"> 사업자도매문의 </a></li>
-                    <li class="active"><a href="#"> 1:1문의 </a></li>
+                    <li class="m_active"><a href="#"> 1:1문의 </a></li>
                     <li><a href="#"> 상품리뷰 </a></li>
                     <li><a href="#"> FAQ </a></li>
                 </ul>
@@ -86,12 +85,14 @@
                 </table>
             </div> <!-- b_table end-->
             <div id="b_function">
-                <input type="search" placeholder="Search" />
-                <input type="button" value="글쓰기" />
-                <div id="b_page">
+                <div class="b_f_top">
+                    <input class="search" type="search" placeholder="Search" />
+                    <input class="btn" type="button" value="글쓰기" />
+                </div>
+                <div class="b_f_bottom">
                     <ul>
-                        <a href="#">&lt;</a>
-                        <li><a href="#">1</a></li>
+                        <a class="left" href="#">&lt;</a>
+                        <li class="f_active"><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
                         <li><a href="#">3</a></li>
                         <li><a href="#">4</a></li>
@@ -100,11 +101,12 @@
                         <li><a href="#">7</a></li>
                         <li><a href="#">8</a></li>
                         <li><a href="#">9</a></li>
-                        <a href="#">&gt;</a>
+                        <a class="right" href="#">&gt;</a>
                     </ul>
                 </div> <!-- b_page end -->
             </div> <!-- b_function end -->
         </div> <!-- b_bottom end -->
     </div> <!-- b_wrap end-->
+    <script src='./js/board.js'></script>
 </body>
 </html>
