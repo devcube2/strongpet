@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>qna</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='qna.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/qna.css'>
 </head>
 <body>
     <div id="q_wrap">
@@ -17,15 +17,19 @@
             </div>
         </div>
         <div id="q_bottom">
-            <span><img src="./img/board/user.png"></span>
-            <input type="text" placeholder="작성자 이름" >
-            <input type="text" placeholder="비밀번호" >
-            <span></span>
-            <a href="#">카테고리</a>
-            <input type="text" placeholder="제목">
+            <div class="q_b_top">
+                <span class="q_b_img"><img src="./img/board/user.png"></span>
+                <input type="text" placeholder="작성자 이름" >
+                <input type="password" placeholder="비밀번호" >
+                <span class="secret"><a href="#"><img src="./img/board/secret.png"></a></span>
+            </div>
+            <div class="q_b_bottom">
+                <a href="#">카테고리</a>
+                <input type="text" placeholder="제목">
+            </div>
             <textarea placeholder="내용을 입력해주세요."></textarea>
         </div>
     </div>
-    <script src='qna.js'></script>
+    <script src='./js/qna.js'></script>
 </body>
 </html>
