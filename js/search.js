@@ -73,23 +73,4 @@ function loadSearchHTML() {
         html += '</ul>'
     }
     searchMain.innerHTML = html
-
-    // 주간 베스트 상품
-    // let count = 0
-    // let html = '<p class="f-size24 f-bold top-bottom-pad15">WEEKLY BEST PRODUCT</p>'
-    // for (let i = 0; i < parseInt(주간베스트상품.length / displayLineCount); i++) {
-    //     html += '<ul class="show-line">'
-    //     for (let j = 0; j < displayLineCount; j++, count++) {
-    //         html += generateLiTag(주간베스트상품[count].thumbnail[0], 주간베스트상품[count].thumbnail[1], 주간베스트상품[count].name, 주간베스트상품[count].price)
-    //     }
-    //     html += '</ul>'
-    // }
-    // if (count < 주간베스트상품.length) {
-    //     html += '<ul class="show-line">'
-    //     for (; count < 주간베스트상품.length; count++) {
-    //         html += generateLiTag(주간베스트상품[count].thumbnail[0], 주간베스트상품[count].thumbnail[1], 주간베스트상품[count].name, 주간베스트상품[count].price)
-    //     }
-    //     html += '</ul>'
-    // }
-    // weeklyGoods.innerHTML = html    
 }

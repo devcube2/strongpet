@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     const loginModal = document.getElementById('loginModal');
     if (loginModal) {
@@ -36,4 +37,9 @@ function allcheck(){
         agreePrivacy.checked = false;
         agreeAge.checked = false;
     }
+}
+
+function keywordSearch() {
+    const inputbox = document.querySelector('#top-search-inputbox')
+    console.log(inputbox.value)
 }
