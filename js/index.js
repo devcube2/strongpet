@@ -4,7 +4,7 @@ function generateStock() {
 
     const 상품1 = {
         no: 1,
-        category: '과일/야채/치즈/노른자',
+        category: '과일-야채-치즈-노른자',
         name: '건강한펫 동결건조 꼬마양배추 35g',
         desc: [
             'img/main/과일-야채-치즈-노른자/동결건조꼬마양배추35g/content-1.webp',
@@ -27,7 +27,7 @@ function generateStock() {
     }
     const 상품2 = {
         no: 2,
-        category: '과일/야채/치즈/노른자',
+        category: '과일-야채-치즈-노른자',
         name: '건강한펫 동결건조 노른자 100g',
         desc: [
             'img/main/과일-야채-치즈-노른자/동결건조노른자100g/content-1.webp',
@@ -50,7 +50,7 @@ function generateStock() {
     }
     const 상품3 = {
         no: 3,
-        category: '과일/야채/치즈/노른자',
+        category: '과일-야채-치즈-노른자',
         name: '건강한펫 동결건조 야채랑 과일이랑 60g',
         desc: [
             'img/main/과일-야채-치즈-노른자/동결건조야채랑과일이랑60g/content-1.webp',
@@ -79,7 +79,7 @@ function generateStock() {
     }
     const 상품4 = {
         no: 4,
-        category: '과일/야채/치즈/노른자',
+        category: '과일-야채-치즈-노른자',
         name: '건강한펫 동결건조 풀떼기 밀싹,보리싹 2g',
         desc: [
             'img/main/과일-야채-치즈-노른자/동결건조풀떼기밀싹보리싹2g/content-1.webp',
@@ -154,7 +154,7 @@ function generateStock() {
     }
     const 상품7 = {
         no: 7,
-        category: '우주최초츄르/파우더',
+        category: '우주최초츄르-파우더',
         name: '우주최초츄르',
         desc: [
             'img/main/우주최초츄르-파우더/우주최초츄르/content-1.webp',
@@ -177,7 +177,7 @@ function generateStock() {
     }
     const 상품8 = {
         no: 8,
-        category: '우주최초츄르/파우더',
+        category: '우주최초츄르-파우더',
         name: '동결건조 북어 파우더 100g',
         desc: [
             'img/main/우주최초츄르-파우더/동결건조북어파우더100g/content-1.webp',
@@ -201,7 +201,7 @@ function generateStock() {
     }
     const 상품9 = {
         no: 9,
-        category: '우주최초츄르/파우더',
+        category: '우주최초츄르-파우더',
         name: '동결건조 연어 파우더 100g',
         desc: [
             'img/main/우주최초츄르-파우더/동결건조연어파우더100g/content-1.webp',
@@ -225,7 +225,7 @@ function generateStock() {
     }
     const 상품10 = {
         no: 10,
-        category: '우주최초츄르/파우더',
+        category: '우주최초츄르-파우더',
         name: '동결건조 치킨 파우더 100g',
         desc: [
             'img/main/우주최초츄르-파우더/동결건조치킨파우더100g/content-1.webp',
@@ -332,4 +332,8 @@ function loadHTML() {
         html += '</ul>'
     }
     bestGoods.innerHTML = html
+}
+
+function search() {
+
 }
