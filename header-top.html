@@ -1,9 +1,11 @@
 <div id="header-top">
     <div id="top-search-box">
-        <input type="text" placeholder="Search">
+        <input id="top-search-inputbox" type="text" placeholder="Search" onkeypress="if (event.keyCode == 13){keywordSearch();}"/>
     </div>
     <div id="top-logo">
-        <img src="img/main/header-logo.png" alt="">
+        <a href="index.html">
+            <img src="img/main/header-logo.png" alt="">
+        </a>
     </div>
     <div id="top-menu">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
@@ -241,7 +243,7 @@
                                 만 14세 이상입니다. (필수)
                             </label>
                         </div>
-                    <button type="button" data-bs-dismiss="modal" aria-label="Close">취소</button>
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close" class="close-btn">취소</button>
                     <button type="button" class="add_join" data-bs-toggle="modal" data-bs-target="#addjoinModal">가입하기</button>
                 </form>
             </div>
