@@ -1,5 +1,9 @@
 *{
     margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none; color: black;
 }
 #q_top{
     display: flex; justify-content: space-between;
@@ -20,7 +24,11 @@
     border: 1px solid #dfdfdf;
     background-color: white;
     font-size: 12px;
+    border: none;
     border-radius: 5px;
+}
+#q_top .q_btn .btn_c{
+    border: 1px solid #d3d3d3;
 }
 #q_top .q_btn .btn_w{
     background-color: #ffac00; color: white;
@@ -28,5 +36,52 @@
 /* q_top end */
 
 #q_bottom{
-    margin: 0 auto; width: 50%;
+    margin: 0 auto; width: 900px;
 }
+#q_bottom input{
+    border: none;
+}
+#q_bottom .q_b_top{
+    position: relative; margin-bottom: 30px;
+}
+#q_bottom .q_b_top .q_b_img{
+    position: absolute;
+    left: -45px; top: -2px;
+    
+}
+#q_bottom .q_b_top .q_b_img img{
+    width: 35px;
+    border-radius: 50px;
+}
+#q_bottom .q_b_top input{
+    border-bottom: 1px solid #dfdfdf;
+    outline: none; padding: 0px 20px 5px 0px;
+    margin-right: 5px; font-size: 14px;
+}
+#q_bottom .q_b_top .secret{
+    position: absolute; right : 0;
+}
+#q_bottom .q_b_top .secret a img{
+    width: 20px;
+}
+#q_bottom .q_b_bottom{
+    margin-bottom: 30px;
+    display: flex;
+}
+#q_bottom .q_b_bottom *{
+    border-bottom: 1px solid #dfdfdf;
+    outline: none; font-size: 20px;
+}
+#q_bottom .q_b_bottom > a{
+    padding: 0px 100px 5px 0px;
+    margin-right: 10px;
+}
+#q_bottom .q_b_bottom > input{
+    padding: 0px 200px 5px 0px; width: 710px; 
+}
+#q_bottom textarea{
+    outline: none; resize: none; border: 1px solid #dfdfdf;
+    font-size: 20px; color: #aaaaaa; line-height: 30px;
+    width: 100%; height: 700px; padding: 10px 0px
+}
+/* q_bottom end */
