@@ -47,7 +47,6 @@ a{
 #q_bottom .q_b_top .q_b_img{
     position: absolute;
     left: -45px; top: -2px;
-    
 }
 #q_bottom .q_b_top .q_b_img img{
     width: 35px;
@@ -77,11 +76,11 @@ a{
     margin-right: 10px;
 }
 #q_bottom .q_b_bottom > input{
-    padding: 0px 200px 5px 0px; width: 710px; 
+    padding: 0px 200px 5px 0px; width: 710px;
 }
 #q_bottom textarea{
     outline: none; resize: none; border: 1px solid #dfdfdf;
     font-size: 20px; color: #aaaaaa; line-height: 30px;
-    width: 100%; height: 700px; padding: 10px 0px
+    width: 100%; height: 700px; padding: 10px 0px;
 }
 /* q_bottom end */
