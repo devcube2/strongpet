@@ -42,4 +42,6 @@ function allcheck(){
 function keywordSearch() {
     const inputbox = document.querySelector('#top-search-inputbox')
     console.log(inputbox.value)
+
+    location.href=`search.html?category=&keyword=${inputbox.value}`
 }
