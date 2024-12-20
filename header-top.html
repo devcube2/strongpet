@@ -36,7 +36,7 @@
                         <input type="checkbox" class="form-check-input" id="rememberMeLogin">
                         <label class="form-check-label" style="margin-left: 0px;">로그인 상태유지</label>
                     </div>
-                    <button type="submit" class="btn btn-dark w-100">로그인</button>
+                    <button type="submit" class="btn btn-dark w-100" onclick="loginBtn()">로그인</button>
                 </form>
                 <hr>
                 <button class="btn btn-success w-100 mb-2">네이버로 시작하기</button>
@@ -261,21 +261,20 @@
             <div class="modal-body">
                 <!-- 이용약관 폼 -->
                 <form>
-                    <div class="form-check mb-3">
-                        <div class="form-group mb-3">
-                            <input type="email" class="form-control" placeholder="이메일">
-                            <input type="password" class="form-control" placeholder="비밀번호">
-                            <input type="password" class="form-control" placeholder="비밀번호 확인">
-                            <a>이름</a>
-                            <input type="name" class="form-control" placeholder="이름을 입력하세요">
-                            <a>연락처</a>
-                            <input type="phoneNum" class="form-control" placeholder="연락처">
-                            <a>주소</a>
-                            <input type="adress" class="form-control" placeholder="주소">
-                            <input type="adress" class="form-control" placeholder="상세주소">
-                            <button>가입하기</button>
-                        </div>
+                    <div class="form-group mb-3">
+                        <input type="email" class="email" placeholder="이메일">
+                        <input type="password" class="password" placeholder="비밀번호">
+                        <input type="password" class="form-control" placeholder="비밀번호 확인">
+                        <a>이름</a>
+                        <input type="name" class="form-control" placeholder="이름을 입력하세요">
+                        <a>연락처</a>
+                        <input type="phoneNum" class="form-control" placeholder="연락처">
+                        <a>주소</a>
+                        <input type="adress" class="form-control" placeholder="주소">
+                        <input type="adress" class="form-control" placeholder="상세주소">
+                        <button class="real_join" onclick="joinBtn()">가입하기</button>
                     </div>
+                </div>
                 </form>
             </div>
         </div>
