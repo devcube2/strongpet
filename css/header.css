@@ -198,6 +198,7 @@ body {
     background-color: var(--bs-body-bg);
     background-clip: padding-box;
     border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius:5px;
 }
 
 .password{
@@ -209,4 +210,19 @@ body {
     background-color: var(--bs-body-bg);
     background-clip: padding-box;
     border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius:5px;
+}
+
+#termsContent{
+    margin-left: 16px;
+    resize: none;
+    width: 90%;
+    border: 1px solid lightgray;
+}
+
+#privacyContent{
+    margin-left: 16px;
+    resize: none;
+    width: 90%;
+    border: 1px solid lightgray;
 }
