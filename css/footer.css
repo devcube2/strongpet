@@ -1,0 +1,30 @@
+#footer{
+    width: 1250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.useragree {
+    margin-left: 10px;
+    background-color :  white;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
+.personinfo{
+    margin-left: 10px;
+    background-color :  white;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}

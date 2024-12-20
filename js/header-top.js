@@ -94,8 +94,10 @@ function loginBtn() {
             userFound = true;
             
             alert("로그인 성공!");
-            localStorage.setItem('loggedInUser', JSON.stringify(users[i]));  // 로그인 사용자 정보 로컬스토리지에 저장
+            localStorage.setItem('loggedInUser', JSON.stringify(users[i]));  
+            
             break;
+
         }
     }
 
