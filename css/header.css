@@ -33,7 +33,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     background-color: white;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
 }
 
 #top-search-box input {
