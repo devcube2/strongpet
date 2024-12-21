@@ -1,22 +1,3 @@
-// // 출력함수
-// output();
-// function output(){
-//     let boardList = getBoardList();
-//     let tbody = document.querySelector( 'table  > tbody ');
-//     let html = '';
-//     for (let index = 0 ; index <= boardList.length - 1 ; index ++){
-//         let board = boardList[index];
-//         html += `<tr>
-//                     <td> ${ board.bno } </td>
-//                     <td ><a class="red" href="#"> ${board.category } </a></td>
-//                     <td class="tbody_img"><a href="#"> ${board.title } </a></td>
-//                     <td> ${ board.name } </td>
-//                     <td> ${ board.date } </td>
-//                 </tr>`
-//     }
-//     tbody.innerHTML = html;
-// }
-
 
 // 기본 게시글 출력
 output();
