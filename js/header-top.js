@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const loginModal = document.getElementById('loginModal');
     if (loginModal) {
@@ -19,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
-
 
 function allcheck(){
     const agreeAll = document.getElementById('agreeAll');
@@ -43,11 +40,9 @@ function keywordSearch() {
     const inputbox = document.querySelector('#top-search-inputbox')
     console.log(inputbox.value)
 }
-
-let users = JSON.parse(localStorage.getItem('users')) || []
+let users = JSON.parse(localStorage.getItem('users')) || [];
 
 function joinBtn() {
-    // 필드 값 가져오기
     const email = document.querySelector('.email').value;
     const password = document.querySelector('.password').value;
     const confirmPassword = document.querySelectorAll('input[type="password"]')[1].value;
@@ -56,53 +51,76 @@ function joinBtn() {
     const address = document.querySelector('input[placeholder="주소"]').value;
     const detailAddress = document.querySelector('input[placeholder="상세주소"]').value;
 
-    // 회원 정보를 객체로 저장
     const user = {
         email: email,
         password: password,
         name: name,
         phoneNum: phoneNum,
         address: address,
-        detailAddress: detailAddress
+        detailAddress: detailAddress,
     };
 
-    users.push(user); // users 배열에 추가
-
-    // 로컬 스토리지에 저장
+    users.push(user);
     localStorage.setItem('users', JSON.stringify(users));
-
-    console.log(users); // 콘솔 로그로 확인
-
-    // 폼 초기화
     document.querySelector('form').reset();
-    alert("가입완료!")
+    alert("가입완료!");
 }
 
-
 function loginBtn() {
-    // 로컬스토리지에서 사용자 데이터 가져오기
     let users = JSON.parse(localStorage.getItem('users')) || [];
-
-    // 입력 값 가져오기
     const email = document.querySelector('input[placeholder="이메일"]').value;
     const password = document.querySelector('input[placeholder="비밀번호"]').value;
 
-    
-    let userFound = false; 
+    let userFound = null;
     for (let i = 0; i < users.length; i++) {
         if (users[i].email === email && users[i].password === password) {
-            userFound = true;
-            
+            userFound = users[i];
             alert("로그인 성공!");
-            localStorage.setItem('loggedInUser', JSON.stringify(users[i]));  
-            
+            localStorage.setItem('loggedInUser', JSON.stringify(userFound));
+            updateAuthButtons(userFound);
             break;
-
         }
     }
 
-    // 로그인 실패 시 처리
     if (!userFound) {
         alert("이메일 또는 비밀번호가 잘못되었습니다.");
     }
 }
+
+function updateAuthButtons(user) {
+    const authButtons = document.getElementById('auth-buttons');
+    if (!authButtons) {
+        return;
+    }
+    
+
+    if (user) {
+        authButtons.innerHTML = `
+            <span>${user.name}님 환영합니다!</span>
+            <button id="logout-btn" class="btn btn-danger">로그아웃</button>
+        `;
+
+        const logoutBtn = document.getElementById('logout-btn');
+        logoutBtn.addEventListener('click', () => {
+            localStorage.removeItem('loggedInUser');
+            alert("로그아웃되었습니다.");
+            updateAuthButtons(null); 
+        });
+    } else {
+        
+        authButtons.innerHTML = `
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+                로그인
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                회원가입
+            </button>
+            <button>장바구니</button>
+        `;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    updateAuthButtons(loggedInUser);
+});
