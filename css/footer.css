@@ -8,6 +8,8 @@
     line-height: 1.6; 
     width: 1280px;
     align-items: center;
+    margin: 0 auto; /* 가운데 정렬 */
+    align-items: center;
 }
 
 #footer p {
