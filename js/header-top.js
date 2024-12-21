@@ -24,7 +24,7 @@ function allcheck(){
     const agreeTerms = document.getElementById('agreeTerms');
     const agreePrivacy = document.getElementById('agreePrivacy');
     const agreeAge = document.getElementById('agreeAge');
-    
+
     if (agreeAll.checked) {
         agreeTerms.checked = true;
         agreePrivacy.checked = true;
@@ -39,6 +39,8 @@ function allcheck(){
 function keywordSearch() {
     const inputbox = document.querySelector('#top-search-inputbox')
     console.log(inputbox.value)
+    // <a href="search.html?category=&keyword="><span>전체상품</span></a>
+    location.href=`search.html?category=&keyword=${inputbox.value}`
 }
 let users = JSON.parse(localStorage.getItem('users')) || [];
 
