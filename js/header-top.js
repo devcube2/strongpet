@@ -27,7 +27,7 @@ function allcheck(){
     const agreeTerms = document.getElementById('agreeTerms');
     const agreePrivacy = document.getElementById('agreePrivacy');
     const agreeAge = document.getElementById('agreeAge');
-    
+
     if (agreeAll.checked) {
         agreeTerms.checked = true;
         agreePrivacy.checked = true;
@@ -42,6 +42,8 @@ function allcheck(){
 function keywordSearch() {
     const inputbox = document.querySelector('#top-search-inputbox')
     console.log(inputbox.value)
+    // <a href="search.html?category=&keyword="><span>전체상품</span></a>
+    location.href=`search.html?category=&keyword=${inputbox.value}`
 }
 
 let users = JSON.parse(localStorage.getItem('users')) || []
@@ -87,15 +89,15 @@ function loginBtn() {
     const email = document.querySelector('input[placeholder="이메일"]').value;
     const password = document.querySelector('input[placeholder="비밀번호"]').value;
 
-    
-    let userFound = false; 
+
+    let userFound = false;
     for (let i = 0; i < users.length; i++) {
         if (users[i].email === email && users[i].password === password) {
             userFound = true;
-            
+
             alert("로그인 성공!");
-            localStorage.setItem('loggedInUser', JSON.stringify(users[i]));  
-            
+            localStorage.setItem('loggedInUser', JSON.stringify(users[i]));
+
             break;
 
         }

@@ -1,9 +1,9 @@
 // 한줄에 몇개씩 출력할건지 (이건 수정시 css 랑 연관되어있음...)
 const displayLineCount = 6
 
-function getParameter(urlStr, key) {    
+function getParameter(urlStr, key) {
     const url = new URL(urlStr);
-    const urlParams = url.searchParams;    
+    const urlParams = url.searchParams;
 
     return urlParams.get(key);
 }
@@ -20,9 +20,9 @@ function generateLiTag(thumbnail, thumbnailOver, name, price) {
     return liTag
 }
 
-function search(category, keyword) {    
+function search(category, keyword) {
     const 전체상품목록 = JSON.parse(localStorage.getItem('stock'))
-    
+
     let searchGoods = []
     if (category) {
         for (item of 전체상품목록) {
@@ -35,7 +35,7 @@ function search(category, keyword) {
     }
     else if (keyword) {
         for (item of 전체상품목록) {
-            if (item.name.indexof(keyword) > -1) {
+            if (item.name.indexOf(keyword) > -1) {
                 searchGoods.push(item)
             }
         }
@@ -45,7 +45,7 @@ function search(category, keyword) {
     return 전체상품목록 // 다 없으면 전체상품 리턴한다.
 }
 
-function loadSearchHTML() {    
+function loadSearchHTML() {
     const urlStr = window.location.href
     const category = getParameter(urlStr, 'category')
     const keyword = getParameter(urlStr, 'keyword')
@@ -54,7 +54,7 @@ function loadSearchHTML() {
     const searchGoods = search(category, keyword)
 
     // HTML 요소
-    const searchMain = document.querySelector('#search-main')    
+    const searchMain = document.querySelector('#search-main')
 
     let count = 0
     let html = ''
