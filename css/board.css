@@ -11,15 +11,10 @@ li{
 .font{
     font-weight: 900;
 }
-.red{
-    color: #FF635D;
-}
-.green{
-    color: #6ECC51;
-}
-.blue{
-    color: #00B8FF;
-}
+.red { color: #FF635D; }
+.green { color: #6ECC51; }
+.blue { color: #00B8FF; }
+.purple { color:purple; }
 /* 전체 */
 
 #b_wrap{
@@ -83,13 +78,21 @@ li{
     position: absolute; left: 60px; top: 95%;
     width: 100%; border: 1px solid rgba(215, 215, 215, 1);
     border-radius: 5px; z-index: 1; background-color: white;
-    display: none;
     /*드롭박스 none */
+}
+.hidden {
+    display: none !important;
+}
+#dropdownMenu {
+    display: block;
 }
 #b_bottom .category ul li a{
     display: block;
     padding: 10px 40px 10px 10px;
     text-align: left;
+}
+#b_bottom .category ul li a:hover{
+    background-color: rgb(236, 245, 255);
 }
 #b_bottom > .b_table{
     margin-bottom: 15px;
@@ -124,7 +127,7 @@ li{
 #b_bottom > .b_table table thead tr th:nth-of-type(5){
     width: 10%;
 }
-#b_bottom > .b_table table tbody tr td.tbody_img {
+#b_bottom > .b_table table tbody tr td.tbody_img{
     background-image: url('../img/board/secret.png');
     background-size: 12px;
     background-repeat: no-repeat;
@@ -165,7 +168,7 @@ li{
     color: #aaaaaa;
 }
 #b_function .b_f_bottom ul li a{
-    display: block; color: #aaaaaa; font-size: 16px;
+    display: block; color: #aaaaaa; font-size: 16px; font-weight: bold;
 }
 #b_function .b_f_bottom ul li a:hover{
     color: black; transition: 0.5s;
