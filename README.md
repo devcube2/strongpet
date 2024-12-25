@@ -1,5 +1,5 @@
 ### https://healthypets.co.kr/ (반려동물먹이 쇼핑몰) 클론코딩
-### https://devcube2.github.io/todolist/strongpet/index.html (클론코딩 - 완벽구현은 아님)
+### https://devcube2.github.io/todolist/strongpet/index.html (클론코딩종료 - 완벽구현은 아님)
 
 
 ### 사용자 페이지 구현
